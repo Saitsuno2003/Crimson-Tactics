@@ -28,8 +28,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3319626702298748801}
   m_Father: {fileID: 0}
@@ -59,7 +59,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4915ce2ef14fc074da2ab8e729020237, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstacleGrid: {fileID: 11400000, guid: b1a007d340748a64293e701763963c36, type: 2}
+  obstacle_data: {fileID: 11400000, guid: b1a007d340748a64293e701763963c36, type: 2}
 --- !u!1 &874541807600290982
 GameObject:
   m_ObjectHideFlags: 0

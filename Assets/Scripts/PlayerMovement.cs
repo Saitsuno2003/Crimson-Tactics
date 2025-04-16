@@ -27,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
                 path_Queue.Dequeue(); // target removed
                 if (path_Queue.Count == 0)
                 {
-                    AlignToTileCenter(); // Align the player to the center of the last target tile
+                    AlignToCenter(); // aligns player to tile center
                 }
             }
         }
@@ -50,16 +50,16 @@ public class PlayerMovement : MonoBehaviour
 
     public bool IsMoving => path_Queue.Count > 0; 
 
-    private Vector2Int GetCurrentTile()
+    public Vector2Int GetCurrentTile() // to get the recent tile of player
     {
         int tileX = Mathf.FloorToInt(transform.position.x / tileSize);
         int tileZ = Mathf.FloorToInt(transform.position.z / tileSize);
         return new Vector2Int(tileX, tileZ);
     }
 
-    private void AlignToTileCenter()
+    private void AlignToCenter()
     {
-        Vector3 alignedPosition = new Vector3(Mathf.FloorToInt(transform.position.x / tileSize) * tileSize ,transform.position.y,Mathf.FloorToInt(transform.position.z / tileSize) * tileSize);
-        transform.position = alignedPosition;
+        Vector3 alignedPos = new Vector3(Mathf.FloorToInt(transform.position.x / tileSize) * tileSize ,transform.position.y,Mathf.FloorToInt(transform.position.z / tileSize) * tileSize);
+        transform.position = alignedPos;
     }
 }
